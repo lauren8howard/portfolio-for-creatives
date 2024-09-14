@@ -14,9 +14,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url(<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*
 
 Imported stylesheets. Remove the ones you do not want to use.
@@ -89,7 +87,7 @@ html {
   --background-color-about: #F9F5ED;
   --background-color-footer: #F9F5ED;
   --alt-background-color: #F9F5ED;
-  --background-color-holding-page: #586A42(82, 0, 255, 0.6);
+  --background-color-holding-page: #F9F5ED(82, 0, 255, 0.6);
   --h1-color: #212121;
   --h2-color: #212121;
   --h3-color: #212121;
@@ -100,18 +98,18 @@ html {
   --holding-page-title-color: #212121;
   --accent-color: ##586A42;
   --overlay-color: #586A42;
-  --overlay-title-color: #F9F5ED;
+  --overlay-title-color: #586A42;
   --overlay-description-color: #212121;
   --hyperlink-color: #212121;
   --hyperlink-alternate-color: o#586A42;
   --hover-color: #586A42;
   --visited-color: #586A42;
   --project-title-color: #586A42;
-  --project-sidebar-background-color: #586A42;
-  --project-sidebar-text-color: #F9F5ED;
+  --project-sidebar-background-color: #F9F5ED;
+  --project-sidebar-text-color: #212121;
   --heart-color: darkred;
   --holding-page-footer-color: #F9F5ED;
-  --text-selection-background-color: #586A42;
+  --text-selection-background-color: #F9F5ED;
 }
 
 body {
