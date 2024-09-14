@@ -82,21 +82,21 @@ html {
 :root {
   --body-typeface: "Inter", sans-serif;
   --heading-typeface: "Montserrat", sans-serif;
-  --project-title-typeface: "Inter", sans-serif;
+  --project-title-typeface: "Montserrat", sans-serif;
   --background-color: #F9F5ED;
   --background-color-about: #F9F5ED;
   --background-color-footer: #F9F5ED;
-  --alt-background-color: #F9F5ED;
+  --alt-background-color: ##212121;
   --background-color-holding-page: #F9F5ED(82, 0, 255, 0.6);
   --h1-color: #212121;
   --h2-color: #212121;
   --h3-color: #212121;
   --h4-color: #212121;
   --h5-color: #212121;
-  --h6-color: #212121;
+  --h6-color: #586A42;
   --primary-text-color: #212121;
   --holding-page-title-color: #212121;
-  --accent-color: ##586A42;
+  --accent-color: #586A42;
   --overlay-color: #586A42;
   --overlay-title-color: #586A42;
   --overlay-description-color: #212121;
