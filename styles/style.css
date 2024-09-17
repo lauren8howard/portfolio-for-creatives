@@ -88,12 +88,12 @@ html {
   --background-color-footer: #F9F5ED;
   --alt-background-color: ##212121;
   --background-color-holding-page: #F9F5ED(82, 0, 255, 0.6);
-  --h1-color: #212121;
+  --h1-color: #586A42;
   --h2-color: #212121;
   --h3-color: #212121;
   --h4-color: #212121;
   --h5-color: #212121;
-  --h6-color: #586A42;
+  --h6-color: #212121;
   --primary-text-color: #212121;
   --holding-page-title-color: #212121;
   --accent-color: #586A42;
@@ -101,7 +101,7 @@ html {
   --overlay-title-color: #586A42;
   --overlay-description-color: #212121;
   --hyperlink-color: #212121;
-  --hyperlink-alternate-color: o#586A42;
+  --hyperlink-alternate-color:#212121;
   --hover-color: #586A42;
   --visited-color: #586A42;
   --project-title-color: #586A42;
