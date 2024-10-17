@@ -29,7 +29,6 @@ Imported stylesheets. Remove the ones you do not want to use.
 
 /* TODO: Delete any stylesheets that you do not want to use. */
 
-@import url("make-something-fly.css");
 @import url("animated-gradient.css");
 @import url("text-stroke.css");
 @import url("stroke-shadow.css");
@@ -80,7 +79,7 @@ html {
 /* TODO: Adjust the variables below, create new variables as desired, and delete the variables that you do not want to use. */
 
 :root {
-  --body-typeface: "Inter", sans-serif;
+  --body-typeface: "Montserrat", sans-serif;
   --heading-typeface: "Montserrat", sans-serif;
   --project-title-typeface: "Montserrat", sans-serif;
   --background-color: #F9F5ED;
@@ -89,7 +88,7 @@ html {
   --alt-background-color: ##212121;
   --background-color-holding-page: #F9F5ED(82, 0, 255, 0.6);
   --h1-color: #586A42;
-  --h2-color: #212121;
+  --h2-color: #586A42;
   --h3-color: #212121;
   --h4-color: #212121;
   --h5-color: #212121;
@@ -97,9 +96,9 @@ html {
   --primary-text-color: #212121;
   --holding-page-title-color: #212121;
   --accent-color: #586A42;
-  --overlay-color: #586A42;
-  --overlay-title-color: #586A42;
-  --overlay-description-color: #212121;
+  --overlay-color: #212121;
+  --overlay-title-color: #F9F5ED;
+  --overlay-description-color: #F9F5ED;
   --hyperlink-color: #212121;
   --hyperlink-alternate-color:#212121;
   --hover-color: #586A42;
@@ -107,7 +106,7 @@ html {
   --project-title-color: #586A42;
   --project-sidebar-background-color: #F9F5ED;
   --project-sidebar-text-color: #212121;
-  --heart-color: darkred;
+  --heart-color: rgb(252, 117, 157);
   --holding-page-footer-color: #F9F5ED;
   --text-selection-background-color: #F9F5ED;
 }
@@ -156,7 +155,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 3rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h2-color);
@@ -326,7 +325,7 @@ a:active {
 }
 
 .logo {
-  width: 3rem;
+  width: 5rem;  
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -700,7 +699,7 @@ a:active {
   }
 
   .logo {
-    width: 15rem;
+    width: 5rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
