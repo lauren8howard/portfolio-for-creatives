@@ -162,7 +162,7 @@ h2 {
 }
 
 h3 {
-  font-size: .75rem;
+  font-size: 1rem !important;
   margin-bottom: 1.5rem;
   line-height: .5rem;
   color: var(--h3-color);
@@ -320,12 +320,12 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
+
   align-items: flex-start;
 }
 
 .logo {
-  width: 5rem;  
+  width: 10rem;  
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -357,6 +357,22 @@ a:active {
   padding: 1rem;
 }
 
+.project-info {
+  padding-bottom: 32rem;
+}
+
+.main-menu-item {
+  display: flex;
+  flex-direction:column-reverse;
+  justify-content: space-between;
+}
+
+.socials-list {
+  display: flex;
+  flex-direction:column-reverse;
+  justify-content: space-between;
+}
+
 /* Work Page Layout
 
 ██     ██  ██████  ██████  ██   ██     ██████   █████   ██████  ███████ 
@@ -385,9 +401,16 @@ a:active {
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
 
+.project-details {
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  gap: 0%;
+}
+
 .work-page-grid-item {
   width: 100%;
   height: auto;
+ display: block;
   position: relative;
   /* Required to contain overlay size */
 }
@@ -409,11 +432,12 @@ a:active {
   flex-direction: column;
   padding: 1em;
   background-color: var(--overlay-color);
-  transition: opacity 0.3s, visibility 0.3s;
+  visibility: hidden; 
+  transition: opacity 0.75s ease, visibility 0.75s ease;
 }
 
 .work-page-grid-item:hover .overlay {
-  visibility: visible;
+ visibility: visible;
   opacity: 0.8;
 }
 
@@ -467,13 +491,10 @@ a:active {
 */
 
 .global-footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  min-height: 100vh;
-  background: var(--background-color-footer);
-  padding: 1rem;
-}
+    align-items: left;
+    margin: 0;
+  }
+
 
 .footer-item-1 {
   grid-column: 1 / 2;
