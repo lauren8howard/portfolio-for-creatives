@@ -229,18 +229,20 @@ a:link {
 
 a:visited {
   color: var(--visited-color);
+  text-decoration: none;
 }
 
 a:hover {
-  color: var(--hover-color);
+  text-decoration: underline;
 }
 
 a:focus {
   outline: 1px solid var(--accent-color);
+  text-decoration: underline;
 }
 
 a:active {
-  color: var(--hover-color);
+  text-decoration: underline;
   /* Tap on mobile */
 }
 
@@ -325,7 +327,7 @@ a:active {
 }
 
 .logo {
-  width: 10rem;  
+  width: 5rem;  
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -365,6 +367,11 @@ a:active {
   display: flex;
   flex-direction:column-reverse;
   justify-content: space-between;
+  
+}
+.main-menu-item:hover .overlay-title, 
+.main-menu-item:hover .overlay-description {
+  text-decoration: underline;
 }
 
 .socials-list {
@@ -720,7 +727,7 @@ a:active {
   }
 
   .logo {
-    width: 5rem;
+    width: 10rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
