@@ -87,28 +87,28 @@ html {
   --background-color-footer: #212121;
   --alt-background-color: #212121;
   --background-color-holding-page: #212121(82, 0, 255, 0.6);
-  --h1-color: #F9F5ED;
-  --h2-color: #F9F5ED;
-  --h3-color: #F9F5ED;
-  --h4-color: #F9F5ED;
-  --h5-color: #F9F5ED;
-  --h6-color: #F9F5ED;
-  --primary-text-color: #F9F5ED;
-  --holding-page-title-color: #F9F5ED;
-  --accent-color: #F9F5ED;
-  --overlay-color: #F9F5ED;
-  --overlay-title-color: #F9F5ED;
-  --overlay-description-color: #F9F5ED;
-  --hyperlink-color: #F9F5ED;
-  --hyperlink-alternate-color:#F9F5ED;
-  --hover-color: #F9F5ED;
-  --visited-color: #F9F5ED;
-  --project-title-color: #F9F5ED;
+  --h1-color: #f9f5ed;
+  --h2-color: #f9f5ed;
+  --h3-color: #f9f5ed;
+  --h4-color: #f9f5ed;
+  --h5-color: #f9f5ed;
+  --h6-color: #f9f5ed;
+  --primary-text-color: #f9f5ed;
+  --holding-page-title-color: #f9f5ed;
+  --accent-color: #f9f5ed;
+  --overlay-color: #f9f5ed;
+  --overlay-title-color: #000000;
+  --overlay-description-color: #030303;
+  --hyperlink-color: #f9f5ed;
+  --hyperlink-alternate-color: #f9f5ed;
+  --hover-color: #f9f5ed;
+  --visited-color: #f9f5ed;
+  --project-title-color: #f9f5ed;
   --project-sidebar-background-color: #212121;
   --project-sidebar-text-color: #212121;
   --heart-color: rgb(252, 117, 157);
-  --holding-page-footer-color: #F9F5ED;
-  --text-selection-background-color: #F9F5ED;
+  --holding-page-footer-color: #f9f5ed;
+  --text-selection-background-color: #f9f5ed;
 }
 
 body {
@@ -118,9 +118,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin-top: 8vh;
-  margin-left: 5vh;
-  margin-right: 5vh;
 }
 
 /* The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text). */
@@ -185,7 +182,7 @@ h4 {
 }
 
 h5 {
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
@@ -240,7 +237,6 @@ a:link {
 a:visited {
   color: var(--visited-color);
   text-decoration: none;
-
 }
 
 a:hover {
@@ -314,8 +310,6 @@ a:active {
   margin-bottom: 1rem;
 }
 
-
-
 /* Hero 
 
 ██   ██ ███████ ██████   ██████  
@@ -341,7 +335,7 @@ a:active {
 }
 
 .logo {
-  width: 5rem;  
+  width: 5rem;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -375,23 +369,21 @@ a:active {
 
 .project-info {
   padding-bottom: 30rem;
-  
 }
 
 .main-menu-item {
   display: flex;
-  flex-direction:column-reverse;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  
 }
-.main-menu-item:hover .overlay-title, 
+.main-menu-item:hover .overlay-title,
 .main-menu-item:hover .overlay-description {
   text-decoration: underline;
 }
 
 .socials-list {
   display: flex;
-  flex-direction:column-reverse;
+  flex-direction: column-reverse;
   justify-content: space-between;
 }
 
@@ -432,7 +424,7 @@ a:active {
 .work-page-grid-item {
   width: 100%;
   height: auto;
- display: block;
+  display: block;
   position: relative;
   /* Required to contain overlay size */
 }
@@ -454,12 +446,12 @@ a:active {
   flex-direction: column;
   padding: 1em;
   background-color: var(--overlay-color);
-  visibility: hidden; 
+  visibility: hidden;
   transition: opacity 0.75s ease, visibility 0.75s ease;
 }
 
 .work-page-grid-item:hover .overlay {
- visibility: visible;
+  visibility: visible;
   opacity: 0.8;
 }
 
@@ -518,7 +510,9 @@ a:active {
   align-items: center; /* Vertically centers the content */
   margin: 0;
   padding: 3rem;
-  background-color: var(--background-color-footer); /* Optional background color */
+  background-color: var(
+    --background-color-footer
+  ); /* Optional background color */
   text-align: center; /* Ensures text is centered */
 }
 
@@ -541,6 +535,7 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 2rem;
 }
 
 /* Sidebar */
@@ -629,7 +624,12 @@ a:active {
   width: 100%;
   min-height: 100vh;
   /* TODO: Delete the following if you do not want a grainy gradient background on index.html. Be careful not to delete the closing } */
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), var(--background-color-holding-page)), url(/assets/temp/noise.svg);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1),
+      var(--background-color-holding-page)
+    ),
+    url(/assets/temp/noise.svg);
   /* For more on grainy gradients see https://grainy-gradients.vercel.app/ */
 }
 
@@ -756,7 +756,7 @@ a:active {
 
   .about {
     padding: 4rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .global-footer {
@@ -766,7 +766,7 @@ a:active {
 
   .about-item-1 {
     grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
   }
 
   .footer-item-1 {
@@ -776,7 +776,7 @@ a:active {
 
   .about-item-2 {
     grid-row: 1 / 2;
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
   }
 
   .footer-item-2 {
@@ -785,8 +785,8 @@ a:active {
   }
 
   .about-item-3 {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
   }
 
   .footer-item-3 {
@@ -795,10 +795,11 @@ a:active {
   }
 
   .about-item-4 {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
     text-align: center;
     align-self: end;
+    background: goldenrod;
   }
 
   .footer-item-4 {
