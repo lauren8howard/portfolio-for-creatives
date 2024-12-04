@@ -847,8 +847,9 @@ a:active {
 
   .project-description {
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    border-left: none;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .project-title {
