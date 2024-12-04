@@ -1044,7 +1044,10 @@ a:active {
   /* Padding around work grid and project page */
   .portfolio,
   .project-wrapper {
-    padding-left: 2rem;
+    padding-top: 0.25rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0;
+    padding-left: 0.25rem;
   }
 
   /* Project Page Flex Direction on Large Devices */
