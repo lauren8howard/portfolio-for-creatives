@@ -121,7 +121,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 /* The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text). */
 
 ::selection {
@@ -174,14 +173,14 @@ h2 {
 
 h3 {
   font-size: 1.5rem !important;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   line-height: 1.5rem;
   color: var(--h3-color);
 }
 
 h4 {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--h4-color);
 }
 
@@ -393,10 +392,6 @@ a:active {
   padding: 1rem;
 }
 
-.project-info {
-  padding-bottom: 30rem;
-}
-
 .main-menu-item {
   display: flex;
   flex-direction: column-reverse;
@@ -418,8 +413,9 @@ a:active {
 
 .socials-list {
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
 }
 
 /* Work Page Layout
@@ -434,24 +430,33 @@ a:active {
 
 .work-wrapper {
   flex: 1;
-  width: 75%;
+  width: 80%;
   grid-template-columns: 1fr 1fr;
-  border-left: 1.5px solid #f9f5ed;
-  padding-bottom: 2rem;
+  overflow-y: auto;
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
+
 .project-description-wrapper {
   grid-template-columns: repeatrepeat (1, 1fr);
-}
-/* Padding around work grid and project page */
-.portfolio,
-.project-wrapper {
-  padding: 0.25rem;
 }
 
 .project-wrapper {
   background: #141414;
+  .project-wrapper {
+    display: flex;
+    flex: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    overflow: hidden; /* prevent double scroll */
+  }
 }
 
+.project {
+  border-left: 1.5px solid #f9f5ed;
+}
 /* Defining the work page grid */
 .grid {
   display: grid;
@@ -556,6 +561,7 @@ a:active {
   min-height: 100vh;
   list-style: none;
   gap: 0rem; /* Adds space between columns */
+  padding-top: 2.5rem;
 }
 
 /* Column 1: Profile Image */
@@ -563,8 +569,8 @@ a:active {
   flex: 0 1 20%; /* The first number is the flex-grow, the second is flex-shrink, and the third is the flex-basis */
   border-left: 1.5px solid #f9f5ed;
   border-right: 1.5px solid #bcb73d;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 /* The image will be centered in its container */
@@ -576,8 +582,8 @@ a:active {
 /* Column 2: Main content */
 .about-content-col {
   flex: 2; /* This takes up more space than the first column */
-  padding-left: 0rem;
-  padding-right: 0rem;
+  padding-left: 0.5rem;
+  padding-right: 2.5rem;
 }
 
 .about-title {
@@ -602,7 +608,7 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  padding: 2.5rem 2.5rem;
   background-color: var(--background-color-footer);
   text-align: center;
   border-top: 1.5px solid #f9f5ed;
@@ -629,20 +635,23 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem;
   min-height: 100vh;
 }
 
 /* Sidebar */
 .project-aside {
-  width: 100%;
+  position: sticky;
+  top: 2.5rem;
+  width: 20%;
+  height: 100vh;
+  flex-shrink: 0;
   display: flex;
+  padding-left: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
   flex-direction: column;
   color: var(--project-sidebar-text-color);
   background: var(--project-sidebar-background-color);
-  height: 100vh;
 }
 
 .project-navigation {
@@ -651,6 +660,10 @@ a:active {
   flex: 1;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.project-info {
+  padding-bottom: 30rem;
 }
 
 /* Base styles */
@@ -863,8 +876,13 @@ a:active {
     padding-bottom: 1rem;
   }
 
+  .project-info {
+    padding-bottom: 2rem;
+  }
+
   .socials-list {
     align-self: center;
+    justify-self: end;
   }
 
   .custom-navigation {
@@ -898,6 +916,7 @@ a:active {
     width: 10rem;
     text-align: left;
   }
+
   .work-wrapper {
     align-self: center;
     width: 100%;
@@ -991,7 +1010,7 @@ a:active {
   }
 
   .logo {
-    width: 10rem;
+    width: 13rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1073,10 +1092,11 @@ a:active {
   }
 
   /* Padding around work grid and project page */
-  .portfolio,
-  .project-wrapper {
-    padding-bottom: 0;
-    padding-left: 2rem;
+  .portfolio {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-left: 1.5px solid #f9f5ed;
   }
 
   /* Project Page Flex Direction on Large Devices */
