@@ -16,6 +16,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
 /*
 
 Imported stylesheets. Remove the ones you do not want to use.
@@ -82,11 +83,11 @@ s *,
   --body-typeface: "Montserrat", sans-serif;
   --heading-typeface: "Montserrat", sans-serif;
   --project-title-typeface: "Montserrat", sans-serif;
-  --background-color: #212121;
-  --background-color-about: #212121;
-  --background-color-footer: #212121;
-  --alt-background-color: #212121;
-  --background-color-holding-page: #212121(82, 0, 255, 0.6);
+  --background-color: #141414;
+  --background-color-about: #141414;
+  --background-color-footer: #141414;
+  --alt-background-color: #141414;
+  --background-color-holding-page: #141414(82, 0, 255, 0.6);
   --h1-color: #f9f5ed;
   --h2-color: #bcb73d;
   --h3-color: #f9f5ed;
@@ -98,15 +99,15 @@ s *,
   --accent-color: #f9f5ed;
   --second-accent-color: #bcb73d;
   --overlay-color: #f9f5ed;
-  --overlay-title-color: #212121;
-  --overlay-description-color: #212121;
+  --overlay-title-color: #141414;
+  --overlay-description-color: #141414;
   --hyperlink-color: #f9f5ed;
   --hyperlink-alternate-color: #f9f5ed;
   --hover-color: #f9f5ed;
   --visited-color: #f9f5ed;
   --project-title-color: #f9f5ed;
-  --project-sidebar-background-color: #212121;
-  --project-sidebar-text-color: #212121;
+  --project-sidebar-background-color: #141414;
+  --project-sidebar-text-color: #141414;
   --heart-color: rgb(252, 117, 157);
   --holding-page-footer-color: #f9f5ed;
   --text-selection-background-color: #f9f5ed;
@@ -160,7 +161,7 @@ img {
 h1 {
   font-size: 3.5rem !important;
   font-family: var(--heading-typeface);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   color: var(--h1-color);
 }
 
@@ -173,7 +174,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem !important;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.5rem;
   color: var(--h3-color);
 }
@@ -256,7 +257,6 @@ a:focus {
 
 a:active {
   color: var(--second-accent-color);
-  /* Tap on mobile */
 }
 
 .navigation-arrow {
@@ -282,6 +282,7 @@ a:active {
 
 .custom-navigation:hover {
   color: var(--second-accent-color);
+  font-style: bold;
 }
 
 .heart {
@@ -317,6 +318,8 @@ a:active {
 .project-title {
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* <-- key part */
+  height: 100%; /* <-- needed to make space-between work fully */
   font-size: 1.225rem;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -330,7 +333,7 @@ a:active {
   padding-right: 2rem;
   padding-left: 2rem;
   width: 50%;
-  border-left: 1px solid #bcb73d;
+  border-left: 1.5px solid #bcb73d;
 }
 
 /* Hero 
@@ -360,7 +363,6 @@ a:active {
 .logo {
   width: 5rem;
   height: auto;
-  /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
 .hero-headline-wrapper {
@@ -434,7 +436,7 @@ a:active {
   flex: 1;
   width: 75%;
   grid-template-columns: 1fr 1fr;
-  border-left: 1px solid #f9f5ed;
+  border-left: 1.5px solid #f9f5ed;
   padding-bottom: 2rem;
 }
 .project-description-wrapper {
@@ -447,7 +449,7 @@ a:active {
 }
 
 .project-wrapper {
-  background: #212121;
+  background: #141414;
 }
 
 /* Defining the work page grid */
@@ -466,46 +468,76 @@ a:active {
 
 .work-page-grid-item {
   position: relative;
-  display: inline-block;
-  width: auto;
-  height: auto;
+  width: 100%;
+  display: block;
   overflow: hidden;
 }
 
-.project-page-grid-item {
-  width: 100%;
-  height: auto;
+.work-page-grid-item figure {
+  margin: 0;
   display: block;
+}
+
+.work-page-grid-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Let the image define the height of the parent */
+.work-page-grid-item {
+  height: auto;
+}
+
+.project-page-grid-item {
   position: relative;
-  margin-bottom: 1rem;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  display: block;
 }
 
 /* Overlay */
 .overlay {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 2em;
+  background-color: var(--overlay-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  flex-direction: column;
-  padding: 2em;
-  background-color: var(--overlay-color);
+  box-sizing: border-box;
+  border-radius: 10px;
+  pointer-events: none;
 }
 
 .work-page-grid-item:hover .overlay {
-  visibility: visible;
   opacity: 1;
-  border-radius: 10px;
+  visibility: visible;
 }
 
+.project-category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.project-stella-category {
+  max-width: fit-content;
+  border-radius: 9rem;
+  border: 1px solid #141414;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0.75rem 0 0;
+  font-size: 1rem;
+  background: #141414;
+  color: var(--overlay-color);
+}
 /* 
 
  █████  ██████   ██████  ██    ██ ████████ 
@@ -515,44 +547,45 @@ a:active {
 ██   ██ ██████   ██████   ██████     ██    
                                            
 */
-.about-wrapper {
-  width: 75%;
-}
 
 .about {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  display: flex;
+  flex: 1;
+  width: 75%;
   background: var(--background-color-about);
+  min-height: 100vh;
+  list-style: none;
+  gap: 0rem; /* Adds space between columns */
+}
+
+/* Column 1: Profile Image */
+.about-item-1 {
+  flex: 0 1 20%; /* The first number is the flex-grow, the second is flex-shrink, and the third is the flex-basis */
+  border-left: 1.5px solid #f9f5ed;
+  border-right: 1.5px solid #bcb73d;
   padding-left: 2rem;
   padding-right: 2rem;
-  flex: 1;
-  border-left: 1px solid #f9f5ed;
-  height: 100%;
 }
+
+/* The image will be centered in its container */
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
+/* Column 2: Main content */
+.about-content-col {
+  flex: 2; /* This takes up more space than the first column */
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
 .about-title {
   padding-bottom: 1rem;
 }
 
-.about-item-1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.about-item-2 {
-  grid-column: 2 / 2;
-  grid-row: 2 / 3;
-}
-
-.about-item-3 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 2;
-  width: 75%;
-}
-
-.about-item-4 {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
+.about-bio {
+  padding-bottom: 3rem;
 }
 
 /* Global Footer
@@ -572,13 +605,14 @@ a:active {
   padding: 2rem;
   background-color: var(--background-color-footer);
   text-align: center;
-  border-top: 1px solid #f9f5ed;
+  border-top: 1.5px solid #f9f5ed;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
 .copyright {
   margin: 0;
-  color: var(--primary-text-color); /* Adjust this if needed */
+  color: var(--primary-text-color);
 }
 
 /* Project Page 
@@ -598,6 +632,7 @@ a:active {
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 2rem;
+  min-height: 100vh;
 }
 
 /* Sidebar */
@@ -607,6 +642,7 @@ a:active {
   flex-direction: column;
   color: var(--project-sidebar-text-color);
   background: var(--project-sidebar-background-color);
+  height: 100vh;
 }
 
 .project-navigation {
@@ -635,13 +671,12 @@ a:active {
 }
 
 .topnav a:hover {
-  background-color: #212121;
+  background-color: #141414;
   color: #bcb73d;
 }
 
 .hamburger-menu {
-  display: none; /* Hide by default */
-  font-size: 3rem;
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
