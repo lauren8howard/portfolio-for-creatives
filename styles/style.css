@@ -666,6 +666,26 @@ a:active {
   padding-bottom: 30rem;
 }
 
+.portfolio-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previous-button a h3,
+.next-button a h3 {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #f9f5ed;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.previous-button a h3:hover,
+.next-button a h3:hover {
+  color: #bcb73d;
+}
 /* Base styles */
 .topnav {
   display: flex;
