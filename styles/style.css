@@ -882,35 +882,94 @@ a:active {
   /* Footer Adjustments */
   .global-footer {
     flex-direction: column; /* Stack items vertically on mobile */
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 2rem;
+
     text-align: center;
   }
 
+  .project-wrapper {
+    padding: 2rem;
+  }
   /* Hide desktop navigation when mobile menu is active */
 
   /* Sidebar Adjustments */
   .project-aside {
-    width: 100%; /* Make sidebar full-width on mobile */
+    width: 100%;
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 0rem;
+    position: static;
+    border-bottom: 1.5px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
   }
 
   .project-info {
-    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding-bottom: 0rem;
+  }
+
+  .project {
+    border-left: 0px;
+  }
+  .main-menu {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .main-menu-item {
+    list-style: none;
+    padding: 0;
   }
 
   .socials-list {
-    align-self: center;
-    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .socials-list li,
+  .socials-list a {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .socials-item {
+    padding-bottom: 0rem;
   }
 
   .custom-navigation {
     align-self: center;
   }
 
-  .project-info {
-    padding-bottom: 2rem;
+  .overlay {
+    padding: 1.5rem;
+    justify-content: left;
+    text-align: left;
+  }
+
+  .project-stella-category {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0 0;
+  }
+
+  .project-category-list {
+    justify-content: left;
+    margin-top: auto;
   }
 
   .project-row {
@@ -948,33 +1007,27 @@ a:active {
   }
 
   .about {
-    grid-template-columns: 1fr; /* Single column */
-    grid-gap: 2rem; /* Adjust gap for mobile if needed */
-    border-left: none; /* Remove border for cleaner layout */
-    padding: 0 1rem; /* Less padding on mobile */
+    flex-direction: column; /* Stack vertically */
+    padding: 0;
+    width: 100%;
+  }
+
+  .about-item-1 {
+    order: 2; /* Move to after the content-col */
+    border: none;
+    padding-top: 2rem;
+  }
+
+  .about-content-col {
+    order: 1;
+    padding: 2rem;
+    border-bottom: 1.5px #bcb73d;
   }
 
   .about-title {
     padding-top: 1rem;
     text-align: left;
-  }
-
-  .about-item-2 {
-    grid-row: 2 / 3;
-  }
-
-  .about-item-3 {
-    grid-row: 3 / 3;
-    padding-bottom: 1rem;
-  }
-
-  .about-item-1,
-  .about-item-2,
-  .about-item-3,
-  .about-item-4 {
-    grid-column: 1;
-    width: 100%;
-    text-align: left;
+    display: flex;
   }
 
   .hero {
@@ -1026,7 +1079,7 @@ a:active {
   }
 
   h3 {
-    font-size: 1.625rem;
+    font-size: 1rem;
   }
 
   .logo {
