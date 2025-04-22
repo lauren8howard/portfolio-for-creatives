@@ -888,7 +888,7 @@ a:active {
   }
 
   .project-wrapper {
-    padding: 2rem;
+    padding: 1rem;
   }
   /* Hide desktop navigation when mobile menu is active */
 
@@ -1020,7 +1020,7 @@ a:active {
 
   .about-content-col {
     order: 1;
-    padding: 1rem;
+    padding: 0rem;
     border-bottom: 1.5px #bcb73d;
   }
 
@@ -1048,7 +1048,7 @@ a:active {
     flex-direction: column; /* Stack branding and nav items */
     align-items: center;
     text-align: center;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0rem;
   }
   .logo-svg {
     padding-bottom: 1.5rem;
