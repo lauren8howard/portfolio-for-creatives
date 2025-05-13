@@ -495,7 +495,6 @@ a:active {
 
 .project-page-grid-item {
   width: 100%;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
   display: block;
   position: relative;
@@ -703,6 +702,7 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1.5rem;
 }
 
 .previous-button a h3,
