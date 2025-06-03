@@ -557,6 +557,24 @@ a:active {
   background: #141414;
   color: var(--overlay-color);
 }
+
+.arrow-icon {
+  width: 1.1em;
+  height: 1.1em;
+  margin: 0 0.3em;
+  vertical-align: middle;
+  display: inline-block;
+  object-fit: contain;
+  border-radius: 0; /* Removes rounded corners */
+}
+
+.previous-button .arrow-icon {
+  margin-right: 0.5em;
+}
+
+.next-button .arrow-icon {
+  margin-left: 0.5em;
+}
 /* 
 
  █████  ██████   ██████  ██    ██ ████████ 
@@ -705,6 +723,20 @@ a:active {
   padding-top: 1.5rem;
 }
 
+.portfolio-navigation a h3 {
+  font-size: 1rem;
+  color: #f9f5ed;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.portfolio-navigation a:hover h3 {
+  color: #bcb73d;
+}
+
 .previous-button a h3,
 .next-button a h3 {
   font-size: 1rem;
@@ -719,6 +751,7 @@ a:active {
 .next-button a h3:hover {
   color: #bcb73d;
 }
+
 /* Base styles */
 .topnav {
   display: flex;
@@ -783,7 +816,7 @@ a:active {
 .project-image {
   width: 100%;
   min-height: 50vh;
-  /* TODO: Delete min-height if you want to remove space between project images on project pages on mobile devices. It is used for the demo page only. */
+ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -791,7 +824,7 @@ a:active {
 
 .large-emoji-placeholder {
   font-size: 12rem;
-  /* TODO: Delete this rule. It is only used for making the placeholder emojis large for demo purposes only. */
+
 }
 
 .text-section {
@@ -804,12 +837,9 @@ a:active {
   padding: 3rem;
 }
 
-/* Main Project Image Area */
-
 .project-details {
   width: 100%;
   padding: 1rem;
-  /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
   background-image: linear-gradient(
     -225deg,
     var(--linear-gradient-color-1) 0%,
