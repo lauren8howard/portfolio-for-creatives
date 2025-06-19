@@ -525,6 +525,15 @@ a:active {
   box-sizing: border-box;   
 }
 
+.project-page-grid-item-dial {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+ border: 1.5px solid #f2f2f2;
+ 
+}
+
 /* Overlay */
 .overlay {
   position: absolute;
