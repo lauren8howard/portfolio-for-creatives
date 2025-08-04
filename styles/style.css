@@ -103,7 +103,7 @@ s *,
   --overlay-description-color: #141414;
   --hyperlink-color: #f9f5ed;
   --hyperlink-alternate-color: #f9f5ed;
-  --hover-color: #f9f5ed;
+  --hover-color: #bcb73d;
   --visited-color: #f9f5ed;
   --project-title-color: #f9f5ed;
   --project-sidebar-background-color: #141414;
@@ -174,6 +174,12 @@ h2 {
 h3 {
   font-size: 1.5rem !important;
   margin-bottom: 1rem;
+  line-height: 1.5rem;
+  color: var(--h3-color);
+}
+
+h7 {
+  font-size: 1.5rem !important;
   line-height: 1.5rem;
   color: var(--h3-color);
 }
@@ -311,30 +317,78 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: stretch; /* Ensures equal height columns */
   margin-bottom: 1rem;
 }
 
 .project-title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* <-- key part */
-  height: 100%; /* <-- needed to make space-between work fully */
+  justify-content: flex-start;
   font-size: 1.225rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0rem 2.5rem;
+  flex: 1;
+}
+
+.collaborator-caption {
+  margin-top: auto; /* Pushes to bottom of project-title */
+}
+
+.collaborator-caption h5 {
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin: 0;
 }
 
 .project-description {
   display: flex;
-  margin-bottom: 1rem;
-  padding-right: 2rem;
+  flex-direction: column;
   padding-left: 2rem;
-  width: 50%;
-  border-left: 1.5px solid #bcb73d;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  flex: 1;
 }
 
+/* “IN A NUTSHELL” section */
+.project-description-block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-description-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 1rem;
+}
+
+.project-description-heading {
+  width: 40%;
+  text-align: right;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start; 
+  font-weight: normal;
+}
+
+.project-description-body {
+  width: 60%;
+  padding-left: 5rem;
+}
+
+.project-description-heading h3 {
+  line-height: 1.1;
+  color: var(--your-heading-color, #f9f5ed)
+}
+
+.project-description-body p {
+  margin: 0 0 1rem 0; 
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 /* Hero 
 
 ██   ██ ███████ ██████   ██████  
@@ -577,22 +631,59 @@ a:active {
   color: var(--overlay-color);
 }
 
-.arrow-icon {
-  width: 1.1em;
-  height: 1.1em;
-  margin: 0 0.3em;
-  vertical-align: middle;
-  display: inline-block;
-  object-fit: contain;
-  border-radius: 0; /* Removes rounded corners */
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  background: none;
+  border-radius: 0;
 }
 
+.project-nav a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f9f5ed;
+  transition: color 0.3s ease;
+}
+
+.project-nav a:hover {
+  color: #bcb73d; /* hover color here */
+}
+
+/* You can keep this for spacing */
 .previous-button .arrow-icon {
   margin-right: 0.5em;
 }
 
 .next-button .arrow-icon {
   margin-left: 0.5em;
+}
+
+.arrow-icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+  display: inline-block;
+  /* Remove object-fit and clip-path as they don't apply to inline SVG */
+}
+
+/* The h3 styles */
+.project-nav a h3 {
+  margin: 0;           /* remove default margin */
+  line-height: 1;      /* tighten line height to remove extra space */
+  font-size: 1rem;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-nav a:hover h3 {
+  color: inherit; /* same as <a> hover */
 }
 /* 
 
@@ -709,9 +800,10 @@ a:active {
 
 /* Sidebar */
 .project-aside {
+  box-sizing: border-box;
+  width: 20%;
   position: sticky;
   top: 2.5rem;
-  width: 20%;
   height: 100vh;
   flex-shrink: 0;
   display: flex;
@@ -721,14 +813,6 @@ a:active {
   flex-direction: column;
   color: var(--project-sidebar-text-color);
   background: var(--project-sidebar-background-color);
-}
-
-.project-navigation {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 
 .project-info {
@@ -764,11 +848,6 @@ a:active {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.previous-button a h3:hover,
-.next-button a h3:hover {
-  color: #bcb73d;
 }
 
 /* Base styles */
