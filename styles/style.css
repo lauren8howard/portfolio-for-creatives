@@ -736,9 +736,9 @@ main.about {
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 5.5rem;
   padding-left: 2.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
 }
 
 .about-image {
@@ -759,7 +759,7 @@ main.about {
 }
 
 .about-contact-list {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .green-link {
@@ -777,7 +777,7 @@ main.about {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 0rem;
   flex-wrap: wrap;
   padding-left: 2.5rem;
   padding-bottom: 2.5rem;
@@ -788,7 +788,7 @@ main.about {
   flex: 1 1 48%;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 /* Global Footer
