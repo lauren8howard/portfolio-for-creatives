@@ -584,17 +584,51 @@ a:active {
   max-width: 1900px;        
   object-fit: cover;
   border-radius: 10px;
-  border: 1.5px solid #f2f2f2;
   box-sizing: border-box;   
 }
 
-.project-page-grid-item-dial {
+.project-grid-pair {
+  display: flex;
+  gap: 1rem; 
+}
+
+.project-page-grid-item-pair {
+  flex: 1 1 0; 
+  overflow: hidden;
+  border-radius: 10px; 
+}
+
+.project-page-grid-item-pair-dark {
+  flex: 1 1 0; 
+  overflow: hidden;
+  border-radius: 10px; 
+  border: 1.5px solid #f9f5ed;    
+}
+
+.project-page-grid-item-pair img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.project-page-grid-item-dark {
+  width: 100%;
+  overflow: hidden;                  
+  display: block;
+  position: relative;
+  border: 1.5px solid #f9f5ed;      
+  border-radius: 10px;              
+  box-sizing: border-box;
+}
+
+.project-page-grid-item-dark video,
+.project-page-grid-item-dark img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 10px;
- border: 1.5px solid #f2f2f2;
- 
+  max-width: 1900px;
+  object-fit: cover;
 }
 
 /* Overlay */
