@@ -1174,7 +1174,7 @@ main.about {
 @media (max-width: 768px) {
  
   h1 {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   /* Footer layout for mobile */
@@ -1187,10 +1187,12 @@ main.about {
   /* Top row stacks & centers */
   .footer-top-row {
     flex-direction: column;
-    align-items: center;  /* Center children horizontally */
+    align-items: center;  
     justify-content: center;
-    gap: 1rem;             /* Space between info + button */
-    text-align: center;    /* Center text in .footer-info */
+    gap: 0rem;             
+    text-align: center;    
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
   }
 
   /* Footer info spacing */
@@ -1362,7 +1364,7 @@ main.about {
   .about-content-top {
     flex-direction: column;
     padding-left: 0rem;
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
     gap: 2rem;
   }
 
