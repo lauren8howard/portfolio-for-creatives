@@ -1173,11 +1173,50 @@ main.about {
 /* For mobile */
 @media (max-width: 768px) {
  
+  h1 {
+    font-size: 2.8rem !important;
+  }
+
+  /* Footer layout for mobile */
   .global-footer {
     flex-direction: column; 
-    padding: 2rem;
-
+    padding: 1rem;
     text-align: center;
+  }
+
+  /* Top row stacks & centers */
+  .footer-top-row {
+    flex-direction: column;
+    align-items: center;  /* Center children horizontally */
+    justify-content: center;
+    gap: 1rem;             /* Space between info + button */
+    text-align: center;    /* Center text in .footer-info */
+  }
+
+  /* Footer info spacing */
+  .footer-info { 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* Footer button spacing */
+  .footer-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+    .copyright {
+    flex-direction: column;
+    align-items: left;
+    gap: 0.5;
+    padding-bottom: 0rem; /* breathing room between text and icon */
+  }
+  
+  .copyright-icon {
+  height: 1rem;
   }
 
   .project-wrapper {
@@ -1201,6 +1240,7 @@ main.about {
     justify-content: space-between;
     align-self: center;
     padding-bottom: 0rem;
+    padding-top: 0rem;
   }
 
   .project {
@@ -1246,11 +1286,15 @@ main.about {
     align-self: center;
   }
 
-  .overlay {
-    padding: 1.5rem;
-    justify-content: left;
-    text-align: left;
+  .work-page-grid-item:hover {
+    background: none;
+    transform: none;
   }
+
+  .work-page-grid-item:hover .overlay {
+    display: none !important;
+  }
+
 
   .project-stella-category {
     font-size: 0.75rem;
@@ -1285,6 +1329,7 @@ main.about {
   .logo {
     width: 10rem;
     text-align: left;
+     align-self: center;
   }
 
   .work-wrapper {
@@ -1294,15 +1339,19 @@ main.about {
   }
 
   .about-wrapper {
-    width: 100%; /* Full width for mobile */
+    width: 100%; 
   }
 
   .about {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column; 
     padding: 0;
     width: 100%;
   }
 
+  .about-content {
+    padding: 0rem;
+    border-left: 0px;
+  }
 
   .about-title {
     padding-top: 1.5rem;
@@ -1310,8 +1359,24 @@ main.about {
     display: flex;
   }
 
+  .about-content-top {
+    flex-direction: column;
+    padding-left: 0rem;
+    padding-top: 1.5rem;
+    gap: 2rem;
+  }
+
+  .about-bio {
+    padding-top: 0rem;
+  }
+
+  .about-contact-list {
+    margin-top: 2.5rem;
+  }
+
   .about-content-bottom {
     flex-direction: column;
+    padding: 0rem;
   }
 
   .about-services-education,
@@ -1321,17 +1386,17 @@ main.about {
 }
 
   .hero {
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem; 
   }
 
   .hero-headline-wrapper {
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem; 
     text-align: center;
   }
 
-  /* Adjust grid or flex layout */
+
   .grid {
-    grid-template-columns: 1fr; /* Make grid single column on mobile */
+    grid-template-columns: 1fr; 
   }
 
   .branding-navigation {
@@ -1349,6 +1414,12 @@ main.about {
 @media (min-width: 768px) {
   /* TODO: Add styles here for medium devices. */
 }
+
+  .overlay {
+    padding: 1.5rem;
+    justify-content: left;
+    text-align: left;
+  }
 
 /* Large devices (desktops, 992px and up) */
 
@@ -1368,12 +1439,11 @@ main.about {
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .logo {
     width: 13rem;
-    /* TODO: Adjust the width of the logo on large devices here. */
   }
 
   .hero {
@@ -1397,6 +1467,12 @@ main.about {
   .work-page-grid-item > a.grayscale:active img,
   .work-page-grid-item > a.grayscale:hover img {
     filter: grayscale(0);
+  }
+
+  .overlay {
+    padding: 1.5rem;
+    justify-content: left;
+    text-align: left;
   }
 
   .about {
