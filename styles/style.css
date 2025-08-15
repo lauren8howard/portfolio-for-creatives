@@ -846,7 +846,7 @@ main.about {
 .footer-top-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start; 
   padding-top: 2.5rem;
   padding-bottom: 1rem;
   border-top: 1.5px solid #f9f5ed;
@@ -881,9 +881,9 @@ main.about {
 .back-to-top {
   background-color: transparent;
   text-decoration: none;
-  padding: 0.4rem 0.75rem;
+  padding: 0rem 0rem;
   transition: all 0.2s ease;
-    color: #f9f5ed;
+  color: #f9f5ed;
 }
 
 
